@@ -9,7 +9,7 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
  * @author Hitesh -latest committed on 02/23/2017
  *
  */
-
+//commiting on 03/29
 // Uncomment @RunWith if you are using Junit to run Test 
 // @RunWith(Cucumber.class)
 
@@ -24,7 +24,7 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 					//,glue={"helpers","classpath:stepDefinitions/Adidas_Mens_Basketball_Search_Count_Validation"}
 					,plugin = {"pretty", "html:target/cucumber"}
 					//, tags ={"@web"},	
-					, tags ={"~@RegressionTest1","~@RegressionTest2","@RegressionTest3"},
+					, tags ={"@RegressionTest1","~@RegressionTest2","~@RegressionTest3"},
 					//, tags ={"@RegressionTest","@FunctionalTest"}, 
 					dryRun=false
 					,monochrome = false

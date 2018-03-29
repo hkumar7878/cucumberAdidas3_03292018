@@ -10,6 +10,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
@@ -24,7 +26,9 @@ public class Hook {
 	public static WebDriver driver;
 	
 	//@Before("@web")
-	@Before("@RegressionTest3")
+	//@Before("@RegressionTest3")
+	@Before()
+	//@BeforeMethod
 	public void setUp()
 	{
 		
@@ -39,6 +43,7 @@ public class Hook {
 	
 	
 	@After
+	//@AfterMethod
 	public void tearDown()
 	{
 		driver.quit();

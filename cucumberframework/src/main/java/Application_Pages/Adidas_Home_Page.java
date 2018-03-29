@@ -20,7 +20,6 @@ public class Adidas_Home_Page extends Hook{
 	GenericUtility genUtil;
 	
 	public Adidas_Home_Page(WebDriver driver) {
-		//this.driver = Hook.getDriver();
 		this.driver = driver;
 	    PageFactory.initElements(driver, this);
 }
