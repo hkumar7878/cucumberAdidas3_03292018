@@ -49,8 +49,7 @@ public class GenericUtility {
 			
 			case "presenceOfElement":
 				
-				WebElement myDynamicElement = (new WebDriverWait(driver, 10))
-				  .until(ExpectedConditions.presenceOfElementLocated(By.xpath(dynamicEle)));
+				WebElement myDynamicElement = (new WebDriverWait(driver, 10)).until(ExpectedConditions.presenceOfElementLocated(By.xpath(dynamicEle)));
 				break;
 			
 		

@@ -1,11 +1,11 @@
 
-#@FunctionalTest
+#Author: Hitesh
+
 Feature: Men Basketball Test Cases feature
-
-
-	#@web
+	Keyword Summary: This feature will verify scenarios related with Men and Womens Product's verification
 	@RegressionTest1
-  Scenario: Validate Basketball Search Result Count Verification
+	
+  Scenario: Validate Basketball page verification and search result count verification
     When Open a browser and open Adidas online store site
     Then Verify Adidas online store Home Page
     And Hover over Men Menu
@@ -15,7 +15,7 @@ Feature: Men Basketball Test Cases feature
     #Then Validate Search Count of Men basketball
     
   @RegressionTest2
-  Scenario: Validate Men's Basketball shoes price Low to high filter
+  Scenario: Validate Women's Tshirt page verification
     When Open a browser and open Adidas online store site
     Then Verify Adidas online store Home Page
     And Hover over Women Menu
