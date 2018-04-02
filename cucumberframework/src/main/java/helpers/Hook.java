@@ -24,11 +24,8 @@ import cucumber.api.java.Before;
 public class Hook {
 
 	public static WebDriver driver;
-	//committ from off 04/02/2018
-	//@Before("@web")
 	//@Before("@RegressionTest3")
 	@Before()
-	//@BeforeMethod
 	public void setUp()
 	{
 		
@@ -38,16 +35,18 @@ public class Hook {
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		driver.get("https://shop.adidas.co.in/");
+		
+		System.out.println("Inside BEFORE METHOD and browser is initilized successfully");
 	}
 	
 	
 	
 	@After
-	//@AfterMethod
+	
 	public void tearDown()
 	{
 		driver.quit();
-		System.out.println("This will run AFTER any scenario defined in the feature file");
+		System.out.println("Inside : After Method and This will run AFTER any scenario defined in the feature file");
 	}
 	
 	public static WebDriver getDriver()

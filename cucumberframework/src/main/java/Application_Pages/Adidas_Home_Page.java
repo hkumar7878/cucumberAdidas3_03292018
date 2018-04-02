@@ -10,13 +10,13 @@ import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 
-import utility.ApplicationUtility;
+//import utility.ApplicationUtility;
 import utility.GenericUtility;
 
 
 public class Adidas_Home_Page extends Hook{
 	
-	ApplicationUtility appUtil;
+	//ApplicationUtility appUtil;
 	GenericUtility genUtil;
 	
 	public Adidas_Home_Page(WebDriver driver) {

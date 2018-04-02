@@ -10,8 +10,8 @@ import cucumber.api.java.en.When;
 import Application_Pages.Adidas_Home_Page;
 //import Application_Pages.Men_BaseketBall_Shoes_Page;
 
-public class CommonPageStepDefinition {
-	// commiting on 03/29
+public class CommonPageStepDefinition1 {
+
 	public WebDriver driver;
 	//Adidas_Home_Page homePage=new Adidas_Home_Page(driver);
 	Adidas_Home_Page homePage;
@@ -28,7 +28,7 @@ public class CommonPageStepDefinition {
 		
 			driver=	Hook.getDriver();
 			homePage=new Adidas_Home_Page(driver);
-			System.out.println("Adidas site is opened successfully");
+			System.out.println("Adidas site is opened successfully:Inside CommonDefinitionClass");
 			Thread.sleep(3000);
 		}
 				
@@ -44,7 +44,7 @@ public class CommonPageStepDefinition {
 				
 		try
 		{
-			System.out.println("Inside Adidas Online Store home page verification step");
+			System.out.println("Inside Adidas Online Store home page verification step:Inside CommonDefinitionClass");
 			homePage.verify_Adidas_Logo();
 		}
 		
