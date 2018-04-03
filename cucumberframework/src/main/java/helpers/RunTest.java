@@ -21,11 +21,12 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 //,glue={"src/main/java/stepDefinitions/Verify_Women_TShirt_Checkout_Process","Hook"}
 					//it's working fine
 					,glue={"helpers","classpath:stepDefinitions","Hook"} //it looks for a Step Definition inside all the files present in the folder mentioned in Glue Option.
+
 					//,glue={"helpers","/src/main/java/stepDefinitions/Adidas_Verify_Search_Criteria_Price_Low_To_High"}
 					//,glue={"helpers","classpath:stepDefinitions/Adidas_Mens_Basketball_Search_Count_Validation"}
 					,plugin = {"pretty", "html:target/cucumber"}
 					//, tags ={"@web"},	
-					, tags ={"@RegressionTest1,@RegressionTest2","~@RegressionTest3"},
+					, tags ={"@RegressionTest1,~@RegressionTest2","~@RegressionTest3"},
 					//, tags ={"@RegressionTest","@FunctionalTest"},
 // To execute the scenarios with 2 tags say regression and critical, we can use below syntax.
 // tags = [“@regression”,”@critical”]
