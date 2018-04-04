@@ -26,7 +26,7 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 					//,glue={"helpers","classpath:stepDefinitions/Adidas_Mens_Basketball_Search_Count_Validation"}
 					,plugin = {"pretty", "html:target/cucumber"}
 					//, tags ={"@web"},	
-					, tags ={"@RegressionTest1,~@RegressionTest2","~@RegressionTest3"},
+					, tags ={"@RegressionTest1,@RegressionTest2","~@RegressionTest3"},
 					//, tags ={"@RegressionTest","@FunctionalTest"},
 // To execute the scenarios with 2 tags say regression and critical, we can use below syntax.
 // tags = [“@regression”,”@critical”]

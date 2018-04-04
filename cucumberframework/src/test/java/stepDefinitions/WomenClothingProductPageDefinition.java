@@ -3,6 +3,7 @@ package stepDefinitions;
 import helpers.Hook;
 
 import org.openqa.selenium.WebDriver;
+import org.testng.annotations.Test;
 
 import Application_Pages.Adidas_Home_Page;
 import Application_Pages.Women_TShirt_Page;
@@ -15,6 +16,7 @@ public class WomenClothingProductPageDefinition {
 	public static WebDriver driver;
 	
 	
+	@Test
 	@And("^Hover over Women Menu$")
 	public void Hover_Over_Men_Menu() throws Throwable 
 	{
