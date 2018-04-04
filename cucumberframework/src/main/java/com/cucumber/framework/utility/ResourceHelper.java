@@ -20,9 +20,12 @@ public class ResourceHelper {
 	
 	public static String getBaseResourcePath()
 	{
-		System.out.println(ResourceHelper.class.getClass().getResource("resources"));
+		/*System.out.println(ResourceHelper.class.getClass().getResource("resources"));
 		String path=ResourceHelper.class.getClass().getResource("/").getPath();
+		System.out.println(path);*/
+		String path=System.getProperty("user.dir");
 		System.out.println(path);
+		
 		return path;
 	}
 	
@@ -33,7 +36,7 @@ public class ResourceHelper {
 	
 	/*public static void main(String [] args)
 	{
-		System.out.println(ResourceHelper.getResourcePath("configfile/"+"config.properties"));
+		//System.out.println(ResourceHelper.getResourcePath("configfile/"+"config.properties"));
 		getBaseResourcePath();
 	}*/
 
