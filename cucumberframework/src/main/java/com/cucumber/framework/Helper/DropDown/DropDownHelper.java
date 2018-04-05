@@ -1,10 +1,15 @@
 package com.cucumber.framework.Helper.DropDown;
 
+import java.awt.List;
+import java.util.LinkedList;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
 import com.cucumber.framework.Helper.Logger.LoggerHelper;
+
+
 
 
 
@@ -28,4 +33,21 @@ public class DropDownHelper {
 		select.selectByVisibleText(visibleValue);
 		Log.info("Locator : " + element + "Value : " + visibleValue);
 	}
+	
+	public String getSelectedValue(WebElement element)
+	{
+		String value=new Select(element).getFirstSelectedOption().getText();
+		Log.info("WebElement : " +element + " value : " +value);
+		return value;
+	}
+	
+	/*public List <String> getAllDropDownValues(WebElement locator)
+	{
+		Select select = new Select(locator);
+		List<WebElement> elementlist= select.getOptions();
+		List<String> valueList= new LinkedList<>();
+		
+		return valueList;
+		
+	}*/
 }
