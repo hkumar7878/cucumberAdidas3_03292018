@@ -1,4 +1,4 @@
-package com.cucumber.framework.TestBase;
+package com.cucumber.framework.Helper.TestBase;
 
 import java.util.concurrent.TimeUnit;
 
@@ -8,6 +8,10 @@ import com.cucumber.framework.configreader.PropertyFileReader;
 import com.cucumber.framework.configuration.browser.BrowserType;
 import com.cucumber.framework.configuration.browser.ChromeBrowser;
 import com.cucumber.framework.configuration.browser.FireFoxBrowser;
+
+import cucumber.api.Scenario;
+import cucumber.api.java.After;
+import cucumber.api.java.Before;
 
 import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
@@ -48,7 +52,7 @@ public class TestBase {
 	
 	public void setUpDriver(BrowserType bType) throws Exception
 	{
-		ObjectRepo.reader= new PropertyFileReader();
+		
 		driver=getBrowserObject(bType);
 		log.debug("Initialize Webdriver : " + driver.hashCode());
 		driver.manage().timeouts().pageLoadTimeout(ObjectRepo.reader.getPageLoadTimeOut(),TimeUnit.SECONDS);
@@ -56,5 +60,19 @@ public class TestBase {
 		
 	}
 	
+	@Before()
+	public void before() throws Exception
+	{
+		ObjectRepo.reader=new PropertyFileReader();
+		setUpDriver(ObjectRepo.reader.getBrowser());
+		log.info(ObjectRepo.reader.getBrowser());
+	}
+	
+	@After
+	public void after(Scenario scenario)
+	{
+		driver.quit();
+		log.info("");
+	}
 
 }

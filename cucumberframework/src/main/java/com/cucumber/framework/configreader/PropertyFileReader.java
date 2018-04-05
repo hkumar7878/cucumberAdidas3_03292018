@@ -2,7 +2,7 @@ package com.cucumber.framework.configreader;
 
 import java.util.Properties;
 
-import org.openqa.selenium.remote.BrowserType;
+import com.cucumber.framework.configuration.browser.BrowserType;
 
 import com.cucumber.framework.utility.ResourceHelper;
 

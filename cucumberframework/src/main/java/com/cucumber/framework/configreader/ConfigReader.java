@@ -1,6 +1,6 @@
 package com.cucumber.framework.configreader;
 
-import org.openqa.selenium.remote.BrowserType;
+import com.cucumber.framework.configuration.browser.BrowserType;
 
 public interface ConfigReader {
 	
