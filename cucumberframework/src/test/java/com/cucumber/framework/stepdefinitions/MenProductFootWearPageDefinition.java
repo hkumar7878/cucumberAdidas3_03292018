@@ -3,21 +3,21 @@ package com.cucumber.framework.stepdefinitions;
 import helpers.Hook;
 
 import org.openqa.selenium.WebDriver;
-import org.testng.annotations.Test;
+
+
+import com.cucumber.framework.Helper.Logger.LoggerHelper;
 
 import Application_Pages.Adidas_Home_Page;
 import Application_Pages.Men_BaseketBall_Shoes_Page;
-import Application_Pages.Women_TShirt_Page;
+
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
+import org.apache.log4j.Logger;
 
 public class MenProductFootWearPageDefinition{
-	// commiting on 03/29
-	// Committing from 03/29 10:13 p.m
-	public WebDriver driver;
-	//CommonPageStepDefinition csd= new CommonPageStepDefinition();
 	
-	//Adidas_Home_Page homePage=new Adidas_Home_Page(driver);
+	public WebDriver driver;
+	private final Logger log=LoggerHelper.getLogger(MenProductFootWearPageDefinition.class);
 	Adidas_Home_Page homePage;
 	Men_BaseketBall_Shoes_Page menBaseketBallShoesPg=new Men_BaseketBall_Shoes_Page(driver);
 	
