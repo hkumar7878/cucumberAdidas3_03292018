@@ -1,11 +1,8 @@
 package com.cucumber.framework.configreader;
 
 import java.util.Properties;
-
 import com.cucumber.framework.configuration.browser.BrowserType;
-
 import com.cucumber.framework.utility.ResourceHelper;
-
 public class PropertyFileReader implements ConfigReader{
 	
 	private Properties prop=null;

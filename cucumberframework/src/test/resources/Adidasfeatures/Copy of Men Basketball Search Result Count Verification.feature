@@ -5,7 +5,8 @@ Feature: Men and Women product verification feature
 	Keyword Summary: This feature will verify scenarios related with Men and Womens Product's verification
 	
 	@RegressionTest1
-    Scenario: Validate Women's Tshirt page verification
+	
+   Scenario: Validate Women's Tshirt page verification
    #When Open a browser and open Adidas online store site
    #Then Verify Adidas online store Home Page
     And Hover over Women Menu

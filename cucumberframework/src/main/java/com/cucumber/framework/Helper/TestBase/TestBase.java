@@ -35,6 +35,7 @@ public class TestBase {
 				return chrome.getChromeDriver(chrome.getChromeCapabilities());
 			
 			case Firefox:
+				
 				FireFoxBrowser firefox= FireFoxBrowser.class.newInstance();
 				return firefox.getFirefoxDriver(firefox.getFirefoxCapabilities());
 				
