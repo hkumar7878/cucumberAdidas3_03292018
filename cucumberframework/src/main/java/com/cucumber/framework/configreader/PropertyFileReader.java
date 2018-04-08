@@ -36,9 +36,18 @@ public class PropertyFileReader implements ConfigReader{
 		return Integer.parseInt(prop.getProperty("PageLoadTimeOut"));
 	}
 
+	
+	@Override
+	public BrowserType getBrowser() {
+		
+		//BrowserType browserValue=BrowserType.valueOf(prop.getProperty("Browser"));
+		
+		return BrowserType.valueOf(prop.getProperty("Browser"));
+	}
 	@Override
 	public String getUserName() {
 		// TODO Auto-generated method stub
+		
 		return null;
 	}
 
@@ -66,10 +75,6 @@ public class PropertyFileReader implements ConfigReader{
 		return 0;
 	}
 
-	@Override
-	public BrowserType getBrowser() {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	
 
 }

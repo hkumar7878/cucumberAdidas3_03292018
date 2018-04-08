@@ -16,7 +16,7 @@ import com.cucumber.framework.Helper.Logger.LoggerHelper;
 
 public class WaitHelper {
 	
-	private WebDriver driver;
+	public WebDriver driver;
 	private Logger log=LoggerHelper.getLogger(WaitHelper.class);
 	
 	public WaitHelper(WebDriver driver)
