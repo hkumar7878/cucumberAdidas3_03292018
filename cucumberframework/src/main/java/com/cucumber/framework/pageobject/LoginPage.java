@@ -8,6 +8,7 @@ import org.apache.log4j.Logger;
 
 import com.cucumber.framework.Helper.Logger.LoggerHelper;
 import com.cucumber.framework.Helper.Wait.WaitHelper;
+import com.cucumber.framework.Helper.genericHelper.GenericHelper;
 import com.cucumber.framework.configreader.ObjectRepo;
 
 public class LoginPage {
@@ -28,6 +29,9 @@ public class LoginPage {
 	@FindBy(xpath="//*[@id='SubmitLogin']")
 	WebElement btn_sign_In;
 	
+	@FindBy(xpath="//*[@id='SubmitLogin']")
+	WebElement txt_SuccessMsgObject;
+	
 	public LoginPage(WebDriver driver)
 	{
 		this.driver=driver;
@@ -36,9 +40,34 @@ public class LoginPage {
 		waithelper.waitForElement(driver, lnk_signIn, ObjectRepo.reader.getExplicitWait());
 	}
 	
-	public void clickOnSignBtn()
+	public void clickOnSignLink()
 	{
+		log.info("Clicking on Signing link....");
 		lnk_signIn.click();
+	}
+	
+	public void enterEmailAddress(String emailAddress)
+	{
+		log.info("Entering email address" + emailAddress);
+		txt_EmailAddress.sendKeys(emailAddress);
+	}
+	
+	public void enterPassword(String password)
+	{
+		log.info("Entering email address" + password);
+		txt_Password.sendKeys(password);
+	}
+	
+	public HomePage clickOnSignInBtn()
+	{
+		log.info("Clicking on Signin button");
+		btn_sign_In.click();
+		return new HomePage();
+	}
+	
+	public boolean verifySuccessLoginMsg()
+	{
+		return new GenericHelper().isDisplayed(txt_SuccessMsgObject);
 	}
 
 }
