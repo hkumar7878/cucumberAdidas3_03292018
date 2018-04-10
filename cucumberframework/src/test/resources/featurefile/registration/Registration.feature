@@ -1,15 +1,15 @@
 Feature: Registration
 
   Scenario Outline: Register User
-    Given User naviage to application
+    Given navigate to application
     When user click on sign in link
-    And enter registration emailid
+    And enter registration emailID
     And click on create an account button
     Then registration form open
-    And select mr radio button
     And enter first name "<firstname>"
     And enter last name "<lastname>"
     And enter password "<password>"
+    And select mr radio button
     And select day "<day>"
     And select month "<month>"
     And select year "<year>"

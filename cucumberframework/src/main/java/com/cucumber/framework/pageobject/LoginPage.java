@@ -29,6 +29,12 @@ public class LoginPage {
 	@FindBy(xpath="//*[@id='SubmitLogin']")
 	WebElement btn_sign_In;
 	
+	@FindBy(xpath="//*[@id='email_create']")
+	WebElement registration;
+	
+	@FindBy(xpath="//*[@id='SubmitCreate']")
+	WebElement createAnAccount;
+	
 	@FindBy(xpath="//*[@id='SubmitLogin']")
 	WebElement txt_SuccessMsgObject;
 	
@@ -68,6 +74,17 @@ public class LoginPage {
 	public boolean verifySuccessLoginMsg()
 	{
 		return new GenericHelper().isDisplayed(txt_SuccessMsgObject);
+	}
+	
+	public void enterRegistrationEmail(){
+		String email = System.currentTimeMillis()+"@gmail.com";
+		log.info("entering registration email.."+email);
+		registration.sendKeys(email);	
+	}
+	
+	public RegistrationPage clickOnCreateAnAccount(){
+		createAnAccount.click();
+		return new RegistrationPage(driver);
 	}
 
 }
