@@ -93,7 +93,9 @@ public class RegistrationPage {
 		this.driver=driver;
 		PageFactory.initElements(driver, this);
 		waithelper= new WaitHelper(driver);
-		waithelper.waitForElement(driver, mrRadioButton, ObjectRepo.reader.getExplicitWait());
+		//waithelper.waitForElement(driver,ObjectRepo.reader.getExplicitWait(),firstName);
+		waithelper.waitForElement(driver,20,firstName);
+		
 	}
 	
 	public void setMrRadioButton() {
@@ -154,7 +156,7 @@ public class RegistrationPage {
 			String weMonthTxt=we.getText().trim().toString();
 			if(weMonthTxt.equals(month))
 			{
-				we.clear();
+				we.click();
 				break;
 			}
 			

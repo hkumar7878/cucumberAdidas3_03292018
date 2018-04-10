@@ -27,7 +27,7 @@ Feature: Registration
 
     Examples: 
       | firstname    | lastname    | password  | day | month    | year | addressFirstName    | addressLastName    | addressCompanyName    | address    | City    | state  | zipcode | mobilePhoneNumber | addressAlias    |
-      | firstnameOne | lastnameOne | password1 |   3 | February | 2013 | addressFirstNameOne | addressLastNameOne | AddresscompanyNameOne | addressOne | Patiala | Punjab |  147001 |        9999982828 | addressAliasOne |
+      | firstnameOne | lastnameOne | password1 |   3 | February | 2013 | addressFirstNameOne | addressLastNameOne | AddresscompanyNameOne | addressOne | Patiala | Alaska |  147001 |        9999982828 | addressAliasOne |
 
       
       # control + shift f to align the contents in feature file
