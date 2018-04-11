@@ -68,7 +68,7 @@ public class LoginPage {
 	{
 		log.info("Clicking on Signin button");
 		btn_sign_In.click();
-		return new HomePage();
+		return new HomePage(driver);
 	}
 	
 	public boolean verifySuccessLoginMsg()
